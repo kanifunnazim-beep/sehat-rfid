@@ -4,6 +4,6 @@ try {
  const modules=await Promise.all(['firebase-app.js','firebase-auth.js','firebase-database.js'].map(path=>import(base+path)));
  await window.initializeCloud(Object.assign({},...modules),firebaseConfig);
 } catch(error) {
- window.cloudStartupError('Firebase SDK gagal dimuat. Pastikan internet aktif, gunakan Live Server, lalu muat ulang. '+(error.code||''));
+ window.cloudStartupError('Layanan belum dapat dimuat. Pastikan internet aktif, lalu muat ulang. '+(error.code||''));
  console.error('Firebase initialization failed',error);
 }
